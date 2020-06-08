@@ -5,8 +5,8 @@
 
 
 $("#buttonSubmit").click(function(){
-    var ammountOfPeople = $("#ammountOfPeople");
-
+    var ammountOfPeople = document.getElementById("peopleInput").value;
+    console.log(ammountOfPeople)
 
     var data = {
         // Array data in order minimum people, max people, price, minNight, maxNight
@@ -16,15 +16,9 @@ $("#buttonSubmit").click(function(){
         house: [1, 4, 240, 2, 15]
     };
 
-    // function howManyPeople(data, ammountOfPeople) {
-    //     if (ammountOfPeople <= data.hotel1[0] &&  ammountOfPeople >= data.hotel1[1]) {
-    //         console.log("dhsakj");
-    //     } else {
-    //         console.log("Something is wrong")
-    //     };
-    // };
 
-    if (ammountOfPeople <= data.hotel1[0] &&  ammountOfPeople >= data.hotel1[1]) {
+    // Find out if the ammount of people matches the following
+    if (ammountOfPeople <= data.hotel1[0] && ammountOfPeople >= data.hotel1[1]) {
         console.log("dhsakj");
     } else {
         console.log("Something is wrong")
