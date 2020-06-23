@@ -1,12 +1,7 @@
-// Make an object containg the accomadation data
-
-
-
-
-
-$('#buttonSubmit').click(function () {
+function globalFunction () {
   // Global Variables
   var ammountOfPeople = document.getElementById('peopleInput').value
+  console.log(ammountOfPeople)
   var nightsToStay = document.getElementById('nightsToStay').value
   var userMaxPriceInput = document.getElementById('userMaxPriceInput').value
 
@@ -119,7 +114,6 @@ $('#buttonSubmit').click(function () {
     return nightData
   }
 
-
   function calculateTotals (availablePlaces, availablePriceRange, availableNights) {
     var totalavailability = {
       hotel1: false,
@@ -151,6 +145,25 @@ $('#buttonSubmit').click(function () {
     return totalavailability
   }
 
+  function printResultsToDom (totalAvailablePlaces) {
+    var testVar = document.getElementById('hotel')
+    if (totalAvailablePlaces.hotel1 === true) {
+      testVar.innerHTML = 'hotel available'
+    }
+
+    if (totalAvailablePlaces.hostel1 === true) {
+      testVar.innerHTML = 'hotel available'
+    }
+
+    if (totalAvailablePlaces.motel1 === true) {
+      testVar.innerHTML = 'motel available'
+    }
+
+    if (totalAvailablePlaces.house === true) {
+      testVar.innerHTML = 'house available'
+    }
+  }
+
   // Calling the calcualtion functions
   calaulateAmmontOfPeople(data)
   calculateMaxPrice(data)
@@ -165,14 +178,26 @@ $('#buttonSubmit').click(function () {
 
   // Calling the total function
   calculateTotals(availablePlaces, availablePriceRange, availableNights)
-
   var totalAvailablePlaces = calculateTotals(availablePlaces, availablePriceRange, availableNights)
 
-  console.log(totalAvailablePlaces)
+  // Calling the function that writes the results to the dom
+  printResultsToDom(totalAvailablePlaces)
+}
 
-  if (totalAvailablePlaces.hotel1 === true) {
-    var testVar = document.getElementById('hotel')
-    testVar.innerHTML = 'hotel available'
-  }
+// Transition JS
+$('#step1Button').click(function () {
+  $('#step2').show(300)
+})
 
+$('#step2Button').click(function () {
+  $('#step3').show(300)
+})
+
+$('#step3Button').click(function () {
+  $('#step4').show(300)
+})
+
+$('#step4Button').click(function () {
+  $('#finalStep').show(300)
+  globalFunction()
 })

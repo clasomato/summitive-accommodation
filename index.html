@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+      <!-- <div class="oldStuff" style="display: none">
         <h1>Lets find you a place to stay!</h1>
         <form class="" action="index.html" method="post">
             <input type="text" placeholder="How many people are there?" id="peopleInput"> <br>
@@ -20,15 +21,57 @@
 
         </form>
         <button id="buttonSubmit">Lets Find Out</button>
+      </div> -->
+
 
         <p id="hotel"></p>
 
+        <section id="step1" class="stepBackground">
+          <div class="stepContaner step1">
+            <h1 id="step1Button">Lets Go</h1>
+          </div>
+        </section>
 
+        <section id="step2" class="stepBackground" style="display: none">
+          <div class="stepContaner step2">
+            <form class="" action="index.html" method="post">
+              <input type="text" placeholder="How many people are there?" id="peopleInput"> <br>
+              <p id="step2Button">Next</p>
+            </form>
+            <button id="buttonSubmit">Lets Find Out</button>
+          </div>
+        </section>
+
+        <section id="step3" class="stepBackground" style="display: none">
+          <div class="stepContaner step3">
+            <form>
+              <input type="text" placeholder="How many nights do you want to stay?" id="nightsToStay"> <br>
+              <p id="step3Button">Next</p>
+            </form>
+          </div>
+        </section>
+
+        <section id="step4" class="stepBackground" style="display: none">
+          <div class="stepContaner step4">
+            <form>
+              <input type="text" placeholder="What is your price range?" id="userMaxPriceInput"> <br>
+              <p id="step4Button">Next</p>
+            </form>
+          </div>
+        </section>
+
+        <section id="finalStep" class="stepBackground" style="display: none">
+          <div class="stepContaner finalStep">
+
+          </div>
+        </section>
 
         <!-- Bootstrap -->
-        <script src="js/bootstrap.js"></script>
+        <!-- <script src="js/bootstrap.js"></script> -->
         <!-- JQuery -->
         <script src="js/jquery.js"></script>
+        <!-- anime JS -->
+        <!-- <script src="js/anime.js"></script> -->
         <!-- Custom JS -->
         <script src="js/script.js"></script>
     </body>
