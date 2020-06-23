@@ -1,4 +1,5 @@
 $pColour: #242424;
+$sColour: #333333;
 
 
 body, html {
@@ -8,6 +9,10 @@ body, html {
     margin: 0;
 
     box-sizing: border-box;
+}
+
+img {
+  width:100%
 }
 
 .stepBackground {
@@ -60,6 +65,8 @@ body, html {
     font-size: 1.8em;
     border: 1px solid white;
     margin-bottom: 3%;
+    padding: 1% 3%;
+    width: auto;
   }
 }
 
@@ -72,4 +79,19 @@ body, html {
 
     cursor: pointer;
   }
+}
+
+.finalStep {
+  display: block !important;
+  height: auto;
+  padding: 5%;
+}
+
+
+.accomadationPlace {
+  width: 40%;
+  margin: 5% 5%;
+  padding: 3%;
+  border-radius: 2em;
+  background-color: $sColour;
 }
