@@ -1,7 +1,6 @@
 function globalFunction () {
   // Global Variables
   var ammountOfPeople = document.getElementById('peopleInput').value
-  console.log(ammountOfPeople)
   var nightsToStay = document.getElementById('nightsToStay').value
   var userMaxPriceInput = document.getElementById('userMaxPriceInput').value
 
@@ -25,26 +24,18 @@ function globalFunction () {
     // Find out if the ammount of people matches the following
     if (ammountOfPeople >= data.hotel1[0] && ammountOfPeople <= data.hotel1[1]) {
       ammountOfPeopleData.hotel1 = true
-    } else {
-      console.log('false')
     }
 
     if (ammountOfPeople >= data.hostel1[0] && ammountOfPeople <= data.hostel1[1]) {
       ammountOfPeopleData.hostel1 = true
-    } else {
-      console.log('false')
     }
 
     if (ammountOfPeople >= data.motel1[0] && ammountOfPeople <= data.motel1[1]) {
       ammountOfPeopleData.motel1 = true
-    } else {
-      console.log('false')
     }
 
     if (ammountOfPeople >= data.house[0] && ammountOfPeople <= data.house[1]) {
       ammountOfPeopleData.house = true
-    } else {
-      console.log('false')
     }
 
     return ammountOfPeopleData
@@ -61,26 +52,18 @@ function globalFunction () {
 
     if (userMaxPriceInput <= data.hotel1[2]) {
       priceData.hotel1 = true
-    } else {
-      console.log('false')
     }
 
     if (userMaxPriceInput <= data.hostel1[2]) {
       priceData.hostel1 = true
-    } else {
-      console.log('false')
     }
 
     if (userMaxPriceInput <= data.motel1[2]) {
       priceData.motel1 = true
-    } else {
-      console.log('false')
     }
 
     if (userMaxPriceInput <= data.house[2]) {
       priceData.house = true
-    } else {
-      console.log('false')
     }
 
     return priceData
@@ -123,22 +106,22 @@ function globalFunction () {
     }
 
     if (availablePlaces.hotel1 === true && availablePriceRange.hotel1 === true && availableNights.hotel1 === true) {
-      console.log('dsdas')
+      console.log('Hotel Available')
       totalavailability.hotel1 = true
     }
 
     if (availablePlaces.hostel1 === true && availablePriceRange.hostel1 === true && availableNights.hostel1 === true) {
-      console.log('dsdas')
+      console.log('Hostel Available')
       totalavailability.hostel1 = true
     }
 
     if (availablePlaces.motel1 === true && availablePriceRange.motel1 === true && availableNights.motel1 === true) {
-      console.log('dsdas')
+      console.log('Motel Available')
       totalavailability.motel1 = true
     }
 
     if (availablePlaces.house === true && availablePriceRange.house === true && availableNights.house === true) {
-      console.log('dsdas')
+      console.log('House Available')
       totalavailability.house = true
     }
 
@@ -146,22 +129,24 @@ function globalFunction () {
   }
 
   function printResultsToDom (totalAvailablePlaces) {
-    var testHotelDom = document.getElementById('hotel')
-    if (totalAvailablePlaces.hotel1 === true) {
+    console.log(totalAvailablePlaces)
+
+    var testHotelDom = document.getElementById('hotel22')
+    if (totalAvailablePlaces.hotel1 == true) {
       testHotelDom.innerHTML = 'hotel available'
     }
 
-    if (totalAvailablePlaces.hostel1 === true) {
+    if (totalAvailablePlaces.hostel1 == true) {
       var testHostelDom = document.getElementById('hostel')
       testHostelDom.innerHTML = 'hotel available'
     }
 
-    if (totalAvailablePlaces.motel1 === true) {
+    if (totalAvailablePlaces.motel1 == true) {
       var testMotelDom = document.getElementById('motel')
       testMotelDom.innerHTML = 'motel available'
     }
 
-    if (totalAvailablePlaces.house === true) {
+    if (totalAvailablePlaces.house == true) {
       var testHouseDom = document.getElementById('house')
       testHouseDom.innerHTML = 'house available'
     }
@@ -175,9 +160,9 @@ function globalFunction () {
   var availablePlaces = calaulateAmmontOfPeople(data)
   var availablePriceRange = calculateMaxPrice(data)
   var availableNights = calaulateNights(data)
-  console.log(availablePlaces)
-  console.log(availablePriceRange)
-  console.log(availableNights)
+  // console.log(availablePlaces)
+  // console.log(availablePriceRange)
+  // console.log(availableNights)
 
   // Calling the total function
   calculateTotals(availablePlaces, availablePriceRange, availableNights)
