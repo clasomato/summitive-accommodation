@@ -146,21 +146,24 @@ function globalFunction () {
   }
 
   function printResultsToDom (totalAvailablePlaces) {
-    var testVar = document.getElementById('hotel')
+    var testHotelDom = document.getElementById('hotel')
     if (totalAvailablePlaces.hotel1 === true) {
-      testVar.innerHTML = 'hotel available'
+      testHotelDom.innerHTML = 'hotel available'
     }
 
     if (totalAvailablePlaces.hostel1 === true) {
-      testVar.innerHTML = 'hotel available'
+      var testHostelDom = document.getElementById('hostel')
+      testHostelDom.innerHTML = 'hotel available'
     }
 
     if (totalAvailablePlaces.motel1 === true) {
-      testVar.innerHTML = 'motel available'
+      var testMotelDom = document.getElementById('motel')
+      testMotelDom.innerHTML = 'motel available'
     }
 
     if (totalAvailablePlaces.house === true) {
-      testVar.innerHTML = 'house available'
+      var testHouseDom = document.getElementById('house')
+      testHouseDom.innerHTML = 'house available'
     }
   }
 
