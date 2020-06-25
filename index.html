@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
+  <head>
+    <meta charset="utf-8">
+    <title>Accomadation NZ</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+  </head>
     <body>
         <p id="hotel"></p>
 
@@ -47,19 +51,66 @@
 
         <section id="finalStep" class="stepBackground" style="display: none">
           <div class="stepContaner finalStep">
-            <div class="accomadationPlace">
-              <img src="media/background.jpg" alt="">
-              <h3>Cozy Motel</h3>
-              <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
-              <a>View More</a>
-            </div>
+            <div class="row">
+              <div class="accomadationPlace col col6" id="hotelCard" style="display: none">
+                <img src="media/background.jpg" alt="">
+                <h3>Cozy Hotel</h3>
+                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
+                <a>View More</a>
+              </div>
 
-            <p id="hotel22"> Null </p> <br>
-            <p id="hostel">Null</p> <br>
-            <p id="motel">Null</p> <br>
-            <p id="house">Null</p>
+              <div class="accomadationPlace col col6" id="hostelCard" style="display: none">
+                <img src="media/background.jpg" alt="">
+                <h3>Cozy Hostel</h3>
+                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
+                <a>View More</a>
+              </div>
+
+              <div class="accomadationPlace col col6" id="motelCard" style="display: none">
+                <img src="media/background.jpg" alt="">
+                <h3>Cozy Motel</h3>
+                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
+                <a>View More</a>
+              </div>
+
+              <div class="accomadationPlace col col6" id="houseCard" style="display: none">
+                <img src="media/background.jpg" alt="">
+                <h3>Cozy House</h3>
+                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
+                <a>View More</a>
+              </div>
+            </div>
           </div>
         </section>
+
+
+        <div class="modalHotelContainer" id="modalHotel">
+          <div class="modalHotel">
+            <h1>Hotel</h1>
+            <div class="row">
+              <div class="col col6">
+                <img src="media/background.jpg" alt="" style="border-radius: 0.5em;">
+              </div>
+
+              <div class="col col6">
+                <div id='map' style='width: 400px; height: 300px; border-radius: 0.5em;'></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col6">
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+              </div>
+
+              <div class="col col6">
+                <h2>Menu</h2>
+                <ul>
+                  <li>Bacon & Eggs: $10.60</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Bootstrap -->
         <!-- <script src="js/bootstrap.js"></script> -->
@@ -69,5 +120,18 @@
         <!-- <script src="js/anime.js"></script> -->
         <!-- Custom JS -->
         <script src="js/script.js"></script>
+
+
+
+
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+        });
+        </script>
     </body>
 </html>

@@ -131,24 +131,32 @@ function globalFunction () {
   function printResultsToDom (totalAvailablePlaces) {
     console.log(totalAvailablePlaces)
 
-    var testHotelDom = document.getElementById('hotel22')
+    // var testHotelDom = document.getElementById('hotel22')
     if (totalAvailablePlaces.hotel1 == true) {
-      testHotelDom.innerHTML = 'hotel available'
+      // testHotelDom.innerHTML = 'hotel available'
+
+      $('#hotelCard').show()
     }
 
     if (totalAvailablePlaces.hostel1 == true) {
-      var testHostelDom = document.getElementById('hostel')
-      testHostelDom.innerHTML = 'hotel available'
+      // var testHostelDom = document.getElementById('hostel')
+      // testHostelDom.innerHTML = 'hotel available'
+
+      $('#hostelCard').show()
     }
 
     if (totalAvailablePlaces.motel1 == true) {
-      var testMotelDom = document.getElementById('motel')
-      testMotelDom.innerHTML = 'motel available'
+      // var testMotelDom = document.getElementById('motel')
+      // testMotelDom.innerHTML = 'motel available'
+
+      $('#motelCard').show()
     }
 
     if (totalAvailablePlaces.house == true) {
-      var testHouseDom = document.getElementById('house')
-      testHouseDom.innerHTML = 'house available'
+      // var testHouseDom = document.getElementById('house')
+      // testHouseDom.innerHTML = 'house available'
+
+      $('#houseCard').show()
     }
   }
 
@@ -189,3 +197,7 @@ $('#step4Button').click(function () {
   $('#finalStep').show(300)
   globalFunction()
 })
+
+
+
+// MapBox

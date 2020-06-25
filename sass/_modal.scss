@@ -1,0 +1,32 @@
+.modalHotelContainer {
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalHotel {
+  background: $sColour;
+  width: 80%;
+  height: 90%;
+  overflow: auto;
+
+  color: white;
+  padding: 5%;
+  border-radius: 1em;
+
+  h1 {
+    font-weight: 300;
+  }
+}
