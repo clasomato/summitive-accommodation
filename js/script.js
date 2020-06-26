@@ -50,19 +50,19 @@ function globalFunction () {
       house: false
     }
 
-    if (userMaxPriceInput <= data.hotel1[2]) {
+    if (data.hotel1[2] <= userMaxPriceInput) {
       priceData.hotel1 = true
     }
 
-    if (userMaxPriceInput <= data.hostel1[2]) {
+    if (data.hostel1[2] <= userMaxPriceInput) {
       priceData.hostel1 = true
     }
 
-    if (userMaxPriceInput <= data.motel1[2]) {
+    if (data.motel1[2] <= userMaxPriceInput) {
       priceData.motel1 = true
     }
 
-    if (userMaxPriceInput <= data.house[2]) {
+    if (data.house[2] <= userMaxPriceInput) {
       priceData.house = true
     }
 
@@ -158,6 +158,14 @@ function globalFunction () {
 
       $('#houseCard').show()
     }
+
+    if (totalAvailablePlaces.hotel1 == false && totalAvailablePlaces.hostel1 == false && totalAvailablePlaces.motel1 == false && totalAvailablePlaces.house == false) {
+      alert('No places available')
+      $('#finalStep').hide()
+      $('#step4').hide(200)
+      $('#step3').hide(200)
+      $('#step2').hide(200)
+    }
   }
 
   // Calling the calcualtion functions
@@ -208,6 +216,63 @@ $('#closeModalButton').click(function () {
   console.log('click2')
   $('#modalHotel').fadeOut(300)
 })
+
+// Slideshow JS
+// Hotel Slideshow
+function hotelSlideshow () {
+  $('#hotelSlide2').hide()
+  $('#hotelSlide3').hide()
+
+  var slideIndex = 1
+  var slideNextButton = document.getElementById('hotelSlideNext')
+  var slideBackButton = document.getElementById('hotelSlideBack')
+
+  slideNextButton.addEventListener('click', event => {
+    slideIndex = slideIndex + 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  slideBackButton.addEventListener('click', event => {
+    slideIndex = slideIndex - 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  console.log('zzz')
+  console.log(slideIndex)
+
+  function slideCheck () {
+
+    if (slideIndex === 1) {
+      $('#hotelSlide1').show()
+      $('#hotelSlide2').hide()
+      $('#hotelSlide3').hide()
+    }
+
+    if (slideIndex === 2) {
+      $('#hotelSlide1').hide()
+      $('#hotelSlide2').show()
+      $('#hotelSlide3').hide()
+    }
+
+    if (slideIndex === 3) {
+      $('#hotelSlide1').hide()
+      $('#hotelSlide2').hide()
+      $('#hotelSlide3').show()
+    }
+
+    if (slideIndex === 4) {
+      slideIndex = 1
+    }
+
+    if (slideIndex === 0) {
+      slideIndex = 3
+    }
+  } // function slideCheck ends
+}
+
+hotelSlideshow()
 
 
 

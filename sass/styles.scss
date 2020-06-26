@@ -1,5 +1,6 @@
 $pColour: #242424;
 $sColour: #333333;
+$tColour: #eb4034;
 
 @import "grid";
 
@@ -17,6 +18,8 @@ body, html {
     margin: 0;
 
     box-sizing: border-box;
+
+    overflow: hidden;
 }
 
 img {
