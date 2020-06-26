@@ -22,73 +22,77 @@
         </section>
 
         <section id="step2" class="stepBackground" style="display: none">
+          <a class="backButton" id="step2BackButton">Back</a>
           <div class="stepContaner step2">
             <form>
               <label>How many people will be staying?</label>
-              <input type="text" placeholder="How many people are there?" id="peopleInput"> <br>
+              <input type="number" placeholder="How many people are there?" id="peopleInput" required> <br>
               <a id="step2Button">Next</a>
             </form>
           </div>
         </section>
 
         <section id="step3" class="stepBackground" style="display: none">
+          <a class="backButton" id="step3BackButton">Back</a>
           <div class="stepContaner step3">
             <form>
               <label>How many nights are you looking to stay?</label>
-              <input type="text" placeholder="How many nights do you want to stay?" id="nightsToStay"> <br>
+              <input type="number" placeholder="How many nights do you want to stay?" id="nightsToStay" required> <br>
               <a id="step3Button">Next</a>
             </form>
           </div>
         </section>
 
         <section id="step4" class="stepBackground" style="display: none">
+          <a class="backButton" id="step4BackButton">Back</a>
           <div class="stepContaner step4">
             <form>
               <label>What is your maximum price range? (number only no "$")</label>
-              <input type="text" placeholder="What is your price range?" id="userMaxPriceInput"> <br>
+              <input type="number" placeholder="What is your price range?" id="userMaxPriceInput" required> <br>
               <a id="step4Button">Next</a>
             </form>
           </div>
         </section>
 
         <section id="finalStep" class="stepBackground" style="display: none">
+          <a class="backButton" id="finalStepBackButton">Back</a>
           <div class="stepContaner finalStep">
             <div class="row">
               <div class="accomadationPlace col col6" id="hotelCard" style="display: none">
-                <img src="media/background.jpg" alt="">
+                <img src="media/hotelSlide1.jpg" alt="">
                 <h3>Cozy Hotel</h3>
-                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
-                <a id="hotelViewButton">View More</a>
+                <!-- <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p> -->
+                <a id="hotelViewButton">View</a>
               </div>
 
               <div class="accomadationPlace col col6" id="hostelCard" style="display: none">
-                <img src="media/background.jpg" alt="">
+                <img src="media/media/hostelSlide1.jpg" alt="">
                 <h3>Cozy Hostel</h3>
-                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
-                <a>View More</a>
+                <!-- <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p> -->
+                <a id="hostelViewButton">View</a>
               </div>
 
               <div class="accomadationPlace col col6" id="motelCard" style="display: none">
-                <img src="media/background.jpg" alt="">
+                <img src="media/motelSlide1.jpg" alt="">
                 <h3>Cozy Motel</h3>
-                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
-                <a>View More</a>
+                <!-- <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p> -->
+                <a id="motelViewButton">View</a>
               </div>
 
               <div class="accomadationPlace col col6" id="houseCard" style="display: none">
-                <img src="media/background.jpg" alt="">
+                <img src="media/houseSlide1.jpg" alt="">
                 <h3>Cozy House</h3>
-                <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p>
-                <a>View More</a>
+                <!-- <p>jbdalksbdasb dbsajbd ajs bds bdkabd sabldasb kasbdjas bdkjbsa kjdbaskj base</p> -->
+                <a id="houseViewButton">View</a>
               </div>
             </div>
           </div>
         </section>
 
 
-        <div class="modalHotelContainer" id="modalHotel">
+        <div class="modalHotelContainer" id="modalHotel" style="display: none">
           <div class="modalClose">
-            <p id="closeModalButton">Exit</p>
+            <p id="closeHotelModalButton">Exit</p>
           </div>
           <div class="modalHotel">
             <h1>Hotel</h1>
@@ -99,9 +103,9 @@
 
 
                 <div class="slideshowContainer">
-                  <img src="media/background.jpg" alt="" id="hotelSlide1" style="border-radius: 0.5em;">
+                  <img src="media/hotelSlide2.jpg" alt="" id="hotelSlide1" style="border-radius: 0.5em;">
                   <img src="media/hotelSlide1.jpg" alt="" id="hotelSlide2" style="border-radius: 0.5em;">
-                  <img src="media/background.jpg" alt="" id="hotelSlide3" style="border-radius: 0.5em;">
+                  <img src="media/hotelSlide3.jpg" alt="" id="hotelSlide3" style="border-radius: 0.5em;">
 
                   <div class="slideButtons">
                     <p id="hotelSlideBack">Back</p>
@@ -157,6 +161,217 @@
           </div>
         </div>
 
+
+
+
+
+
+        <!-- Hostel Modal -->
+        <div class="modalHotelContainer" id="modalHostel" style="display: none">
+          <div class="modalClose">
+            <p id="closeHostelModalButton">Exit</p>
+          </div>
+          <div class="modalHotel">
+            <h1>Hotel</h1>
+            <div class="row">
+              <div class="col col6">
+                <!-- <img src="media/background.jpg" alt="" style="border-radius: 0.5em;"> -->
+                <div class="slideshowContainer">
+                  <img src="media/hostelSlide1.jpg" alt="" id="hostelSlide1" style="border-radius: 0.5em;">
+                  <img src="media/hostelSlide2.jpg" alt="" id="hostelSlide2" style="border-radius: 0.5em;">
+                  <img src="media/hostelSlide3.jpg" alt="" id="hostelSlide3" style="border-radius: 0.5em;">
+
+                  <div class="slideButtons">
+                    <p id="hostelSlideBack">Back</p>
+
+                    <p id="hostelSlideNext">Next</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col6">
+                <div id='mapHostel' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col6">
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                <a class="modalContactButtons">Book Now</a>
+              </div>
+
+              <div class="col col6">
+                <h2>Menu</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                  <li>Avacado Toast with Mushrooms: $10.60 (Vegan, Vegatarian, Gluten free + $1)</li>
+                  <li>Waffles: $13.20</li>
+                  <li>Poached Egg: $4.50</li>
+                </ul>
+
+                <h3>Lunch</h3>
+                <ul>
+                  <li>Bacon & Eggs: $10.60</li>
+                </ul>
+
+                <h3>Dinner</h3>
+                <ul>
+                  <li>T-Bone Steak: $53.99</li>
+                </ul>
+
+                <h3>Deserts & Sides/Snacks</h3>
+                <ul>
+                  <li>Ice Cream Cone: $3.50</li>
+                  <li>Fries: $4.50</li>
+                </ul>
+
+                <a class="modalContactButtons">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <!-- Motel Modal -->
+        <div class="modalHotelContainer" id="modalMotel" style="display: none">
+          <div class="modalClose">
+            <p id="closeMotelModalButton">Exit</p>
+          </div>
+          <div class="modalHotel">
+            <h1>Hotel</h1>
+            <div class="row">
+              <div class="col col6">
+                <!-- <img src="media/background.jpg" alt="" style="border-radius: 0.5em;"> -->
+                <div class="slideshowContainer">
+                  <img src="media/motelSlide1.jpg" alt="" id="motelSlide1" style="border-radius: 0.5em;">
+                  <img src="media/motelSlide2.jpg" alt="" id="motelSlide2" style="border-radius: 0.5em;">
+                  <img src="media/motelSlide3.jpg" alt="" id="motelSlide3" style="border-radius: 0.5em;">
+
+                  <div class="slideButtons">
+                    <p id="motelSlideBack">Back</p>
+
+                    <p id="motelSlideNext">Next</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col6">
+                <div id='mapMotel' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col6">
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                <a class="modalContactButtons">Book Now</a>
+              </div>
+
+              <div class="col col6">
+                <h2>Menu</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                  <li>Avacado Toast with Mushrooms: $10.60 (Vegan, Vegatarian, Gluten free + $1)</li>
+                  <li>Waffles: $13.20</li>
+                  <li>Poached Egg: $4.50</li>
+                </ul>
+
+                <h3>Lunch</h3>
+                <ul>
+                  <li>Bacon & Eggs: $10.60</li>
+                </ul>
+
+                <h3>Dinner</h3>
+                <ul>
+                  <li>T-Bone Steak: $53.99</li>
+                </ul>
+
+                <h3>Deserts & Sides/Snacks</h3>
+                <ul>
+                  <li>Ice Cream Cone: $3.50</li>
+                  <li>Fries: $4.50</li>
+                </ul>
+
+                <a class="modalContactButtons">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- House Modal -->
+        <div class="modalHotelContainer" id="houseMotel" style="display: none">
+          <div class="modalClose">
+            <p id="closeHouseModalButton">Exit</p>
+          </div>
+          <div class="modalHotel">
+            <h1>Hotel</h1>
+            <div class="row">
+              <div class="col col6">
+                <!-- <img src="media/background.jpg" alt="" style="border-radius: 0.5em;"> -->
+                <div class="slideshowContainer">
+                  <img src="media/motelSlide1.jpg" alt="" id="houseSlide1" style="border-radius: 0.5em;">
+                  <img src="media/motelSlide2.jpg" alt="" id="houseSlide2" style="border-radius: 0.5em;">
+                  <img src="media/motelSlide3.jpg" alt="" id="houseSlide3" style="border-radius: 0.5em;">
+
+                  <div class="slideButtons">
+                    <p id="houseSlideBack">Back</p>
+
+                    <p id="houseSlideNext">Next</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col6">
+                <div id='mapHouse' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col6">
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                <a class="modalContactButtons">Book Now</a>
+              </div>
+
+              <div class="col col6">
+                <h2>Menu</h2>
+                <h3>Breakfast</h3>
+                <ul>
+                  <li>Avacado Toast with Mushrooms: $10.60 (Vegan, Vegatarian, Gluten free + $1)</li>
+                  <li>Waffles: $13.20</li>
+                  <li>Poached Egg: $4.50</li>
+                </ul>
+
+                <h3>Lunch</h3>
+                <ul>
+                  <li>Bacon & Eggs: $10.60</li>
+                </ul>
+
+                <h3>Dinner</h3>
+                <ul>
+                  <li>T-Bone Steak: $53.99</li>
+                </ul>
+
+                <h3>Deserts & Sides/Snacks</h3>
+                <ul>
+                  <li>Ice Cream Cone: $3.50</li>
+                  <li>Fries: $4.50</li>
+                </ul>
+
+                <a class="modalContactButtons">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
         <!-- Bootstrap -->
         <!-- <script src="js/bootstrap.js"></script> -->
         <!-- JQuery -->
@@ -170,13 +385,7 @@
 
 
         <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-        var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: [174.775391, -41.287870], // starting position [lng, lat]
-        zoom: 12 // starting zoom
-        });
+
         </script>
     </body>
 </html>

@@ -207,14 +207,48 @@ $('#step4Button').click(function () {
 })
 
 // Modal Toggles
+// Hotel Toggles
 $('#hotelViewButton').click(function () {
   console.log('click1')
   $('#modalHotel').fadeIn(300)
 })
 
-$('#closeModalButton').click(function () {
+$('#closeHotelModalButton').click(function () {
   console.log('click2')
   $('#modalHotel').fadeOut(300)
+})
+
+// Hostel Toggles
+$('#hostelViewButton').click(function () {
+  console.log('click1')
+  $('#modalHostel').fadeIn(300)
+})
+
+$('#closeHostelModalButton').click(function () {
+  console.log('click2')
+  $('#modalHostel').fadeOut(300)
+})
+
+// Motel Toggles
+$('#motelViewButton').click(function () {
+  console.log('click1')
+  $('#modalMotel').fadeIn(300)
+})
+
+$('#closeMotelModalButton').click(function () {
+  console.log('click2')
+  $('#modalMotel').fadeOut(300)
+})
+
+// House Toggles
+$('#houseViewButton').click(function () {
+  console.log('click1')
+  $('#modalHouse').fadeIn(300)
+})
+
+$('#closeHouseModalButton').click(function () {
+  console.log('click2')
+  $('#modalHouse').fadeOut(300)
 })
 
 // Slideshow JS
@@ -272,8 +306,226 @@ function hotelSlideshow () {
   } // function slideCheck ends
 }
 
+// Hostel Slideshow
+function hostelSlideshow () {
+  $('#hostelSlide2').hide()
+  $('#hostelSlide3').hide()
+
+  var slideIndex = 1
+  var slideNextButton = document.getElementById('hostelSlideNext')
+  var slideBackButton = document.getElementById('hostelSlideBack')
+
+  slideNextButton.addEventListener('click', event => {
+    slideIndex = slideIndex + 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  slideBackButton.addEventListener('click', event => {
+    slideIndex = slideIndex - 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  console.log('zzz')
+  console.log(slideIndex)
+
+  function slideCheck () {
+
+    if (slideIndex === 1) {
+      $('#hostelSlide1').show()
+      $('#hostelSlide2').hide()
+      $('#hostelSlide3').hide()
+    }
+
+    if (slideIndex === 2) {
+      $('#hostelSlide1').hide()
+      $('#hostelSlide2').show()
+      $('#hostelSlide3').hide()
+    }
+
+    if (slideIndex === 3) {
+      $('#hostelSlide1').hide()
+      $('#hostelSlide2').hide()
+      $('#hostelSlide3').show()
+    }
+
+    if (slideIndex === 4) {
+      slideIndex = 1
+    }
+
+    if (slideIndex === 0) {
+      slideIndex = 3
+    }
+  } // function slideCheck ends
+}
+
+// Motel Slideshow
+function motelSlideshow () {
+  $('#motelSlide2').hide()
+  $('#motelSlide3').hide()
+
+  var slideIndex = 1
+  var slideNextButton = document.getElementById('motelSlideNext')
+  var slideBackButton = document.getElementById('motelSlideBack')
+
+  slideNextButton.addEventListener('click', event => {
+    slideIndex = slideIndex + 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  slideBackButton.addEventListener('click', event => {
+    slideIndex = slideIndex - 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  console.log('zzz')
+  console.log(slideIndex)
+
+  function slideCheck () {
+    if (slideIndex === 1) {
+      $('#motelSlide1').show()
+      $('#motelSlide2').hide()
+      $('#motelSlide3').hide()
+    }
+
+    if (slideIndex === 2) {
+      $('#motelSlide1').hide()
+      $('#motelSlide2').show()
+      $('#motelSlide3').hide()
+    }
+
+    if (slideIndex === 3) {
+      $('#motelSlide1').hide()
+      $('#motelSlide2').hide()
+      $('#motelSlide3').show()
+    }
+
+    if (slideIndex === 4) {
+      slideIndex = 1
+    }
+
+    if (slideIndex === 0) {
+      slideIndex = 3
+    }
+  } // function slideCheck ends
+}
+
+// House modal
+function houseSlideshow () {
+  $('#houseSlide2').hide()
+  $('#houseSlide3').hide()
+
+  var slideIndex = 1
+  var slideNextButton = document.getElementById('houseSlideNext')
+  var slideBackButton = document.getElementById('houseSlideBack')
+
+  slideNextButton.addEventListener('click', event => {
+    slideIndex = slideIndex + 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  slideBackButton.addEventListener('click', event => {
+    slideIndex = slideIndex - 1
+    console.log(slideIndex)
+    slideCheck()
+  })
+
+  console.log('zzz')
+  console.log(slideIndex)
+
+  function slideCheck () {
+    if (slideIndex === 1) {
+      $('#houseSlide1').show()
+      $('#houseSlide2').hide()
+      $('#houseSlide3').hide()
+    }
+
+    if (slideIndex === 2) {
+      $('#houseSlide1').hide()
+      $('#houseSlide2').show()
+      $('#houseSlide3').hide()
+    }
+
+    if (slideIndex === 3) {
+      $('#houseSlide1').hide()
+      $('#houseSlide2').hide()
+      $('#houseSlide3').show()
+    }
+
+    if (slideIndex === 4) {
+      slideIndex = 1
+    }
+
+    if (slideIndex === 0) {
+      slideIndex = 3
+    }
+  } // function slideCheck ends
+}
+
+
+
+
 hotelSlideshow()
+hostelSlideshow()
+motelSlideshow()
+houseSlideshow()
+
+// Back buttons
+$('#step2BackButton').click(function () {
+  $('#step2').hide(300)
+})
+
+$('#step3BackButton').click(function () {
+  $('#step3').hide(300)
+})
+
+$('#step4BackButton').click(function () {
+  $('#step4').hide(300)
+})
+
+$('#finalStepBackButton').click(function () {
+  $('#finalStep').hide(300)
+})
 
 
 
 // MapBox
+function mapBoxMaps () {
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'mapHostel',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'mapMotel',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'mapHouse',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
+}
+
+mapBoxMaps()
