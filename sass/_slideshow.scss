@@ -1,0 +1,17 @@
+.slideshowContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  p {
+    background-color: white;
+    color: $pColour;
+    border-radius: 0.5em;
+    padding: 1% 2%;
+  }
+}

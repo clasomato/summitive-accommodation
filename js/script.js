@@ -198,6 +198,17 @@ $('#step4Button').click(function () {
   globalFunction()
 })
 
+// Modal Toggles
+$('#hotelViewButton').click(function () {
+  console.log('click1')
+  $('#modalHotel').fadeIn(300)
+})
+
+$('#closeModalButton').click(function () {
+  console.log('click2')
+  $('#modalHotel').fadeOut(300)
+})
+
 
 
 // MapBox
