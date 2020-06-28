@@ -252,17 +252,27 @@ img {
 
 .accomadationPlace {
   width: 100%;
-  margin: 5% 5%;
-  padding: 1%;
+  margin: 3% 3%;
+  padding: 0% 0% 2% 0%;
   border-radius: 0.5em;
   background-color: #333333; }
   .accomadationPlace p {
     text-align: left; }
   .accomadationPlace img {
-    border-radius: 0.5em; }
+    border-radius: 0.5em;
+    width: 100%;
+    padding-bottom: 3%; }
+  .accomadationPlace h3 {
+    font-weight: 300;
+    padding: 3% 1%;
+    margin-bottom: 5%; }
   .accomadationPlace a {
     padding: 1% 3%;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
 
 .backButton {
   position: absolute;
@@ -275,6 +285,42 @@ img {
   font-size: 1.5em;
   border-bottom-right-radius: 0.5em; }
 
+@media screen and (max-width: 600px) {
+  .stepBackground {
+    align-items: flex-end; }
+
+  .stepContaner {
+    width: 95%;
+    border-radius: 0.5em;
+    margin-bottom: 5%;
+    font-size: 1em;
+    padding: 1%; }
+    .stepContaner a {
+      cursor: pointer;
+      background-color: white;
+      margin-top: 1%;
+      padding: 1% 3%;
+      border-radius: 0.5em;
+      color: #242424 !important;
+      min-width: 50%; }
+    .stepContaner input {
+      border-radius: 0.5em;
+      background-color: white;
+      font-size: 1.8em;
+      border: 1px solid white;
+      margin-bottom: 3%;
+      padding: 1% 3%;
+      width: 80%; }
+    .stepContaner label {
+      font-size: 1.8em; }
+
+  .step1 h1 {
+    background-color: white;
+    color: #242424;
+    padding: 1% 3%;
+    border-radius: 0.5em;
+    min-width: 70%;
+    cursor: pointer; } }
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%; }

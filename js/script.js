@@ -209,19 +209,34 @@ $('#step4Button').click(function () {
 // Modal Toggles
 // Hotel Toggles
 $('#hotelViewButton').click(function () {
-  console.log('click1')
+  // Shows the hotel modal
   $('#modalHotel').fadeIn(300)
+
+  // Runs the mapbox api to make the hotel map
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  })
 })
 
 $('#closeHotelModalButton').click(function () {
-  console.log('click2')
   $('#modalHotel').fadeOut(300)
 })
 
 // Hostel Toggles
 $('#hostelViewButton').click(function () {
-  console.log('click1')
   $('#modalHostel').fadeIn(300)
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'mapHostel',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
 })
 
 $('#closeHostelModalButton').click(function () {
@@ -231,8 +246,15 @@ $('#closeHostelModalButton').click(function () {
 
 // Motel Toggles
 $('#motelViewButton').click(function () {
-  console.log('click1')
   $('#modalMotel').fadeIn(300)
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'mapMotel',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
 })
 
 $('#closeMotelModalButton').click(function () {
@@ -242,13 +264,20 @@ $('#closeMotelModalButton').click(function () {
 
 // House Toggles
 $('#houseViewButton').click(function () {
-  console.log('click1')
-  $('#modalHouse').fadeIn(300)
+  $('#houseModal').fadeIn(300)
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  var map = new mapboxgl.Map({
+    container: 'mapHouse',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [174.775391, -41.287870], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+  });
 })
 
 $('#closeHouseModalButton').click(function () {
-  console.log('click2')
-  $('#modalHouse').fadeOut(300)
+  console.log('Houseclick2')
+  $('#houseModal').fadeOut(300)
 })
 
 // Slideshow JS
@@ -466,9 +495,6 @@ function houseSlideshow () {
   } // function slideCheck ends
 }
 
-
-
-
 hotelSlideshow()
 hostelSlideshow()
 motelSlideshow()
@@ -495,29 +521,29 @@ $('#finalStepBackButton').click(function () {
 
 // MapBox
 function mapBoxMaps () {
-  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [174.775391, -41.287870], // starting position [lng, lat]
-    zoom: 12 // starting zoom
-  });
+  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  // var map = new mapboxgl.Map({
+  //   container: 'map',
+  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+  //   center: [174.775391, -41.287870], // starting position [lng, lat]
+  //   zoom: 12 // starting zoom
+  // });
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  var map = new mapboxgl.Map({
-    container: 'mapHostel',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [174.775391, -41.287870], // starting position [lng, lat]
-    zoom: 12 // starting zoom
-  });
-
-  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  var map = new mapboxgl.Map({
-    container: 'mapMotel',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [174.775391, -41.287870], // starting position [lng, lat]
-    zoom: 12 // starting zoom
-  });
+  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  // var map = new mapboxgl.Map({
+  //   container: 'mapHostel',
+  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+  //   center: [174.775391, -41.287870], // starting position [lng, lat]
+  //   zoom: 12 // starting zoom
+  // });
+  //
+  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  // var map = new mapboxgl.Map({
+  //   container: 'mapMotel',
+  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+  //   center: [174.775391, -41.287870], // starting position [lng, lat]
+  //   zoom: 12 // starting zoom
+  // });
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
   var map = new mapboxgl.Map({
