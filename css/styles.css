@@ -179,6 +179,30 @@
     border-radius: 0.5em;
     padding: 1% 2%; }
 
+.bookingPortalContainer {
+  background-color: #242424;
+  border-radius: 3em;
+  padding: 5%; }
+  .bookingPortalContainer input {
+    border-radius: 3em;
+    background-color: white;
+    font-size: 1.8em;
+    border: 1px solid white;
+    margin-bottom: 3%;
+    padding: 1% 3%;
+    width: 100%; }
+  .bookingPortalContainer label {
+    font-size: 1.8em;
+    color: white; }
+  .bookingPortalContainer button {
+    border-radius: 3em;
+    background-color: white;
+    font-size: 1.8em;
+    border: 1px solid white;
+    margin-bottom: 3%;
+    padding: 1% 3%;
+    width: 80%; }
+
 body, html {
   font-family: 'Montserrat', sans-serif;
   padding: 0;

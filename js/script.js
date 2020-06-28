@@ -528,39 +528,55 @@ $('#finalStepBackButton').click(function () {
 
 
 
-// MapBox
-function mapBoxMaps () {
-  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  // var map = new mapboxgl.Map({
-  //   container: 'map',
-  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-  //   center: [174.775391, -41.287870], // starting position [lng, lat]
-  //   zoom: 12 // starting zoom
-  // });
+// Booking Process
+// $('#something').click(function () {
+//   $('#bookingPortal').show(300)
+// })
 
-  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  // var map = new mapboxgl.Map({
-  //   container: 'mapHostel',
-  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-  //   center: [174.775391, -41.287870], // starting position [lng, lat]
-  //   zoom: 12 // starting zoom
-  // });
-  //
-  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  // var map = new mapboxgl.Map({
-  //   container: 'mapMotel',
-  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-  //   center: [174.775391, -41.287870], // starting position [lng, lat]
-  //   zoom: 12 // starting zoom
-  // });
+$('#formCheckNext').click(function () {
+  bookingFormCheck()
+})
 
-  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  // var map = new mapboxgl.Map({
-  //   container: 'mapHouse',
-  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-  //   center: [174.775391, -41.287870], // starting position [lng, lat]
-  //   zoom: 12 // starting zoom
-  // });
+function bookingFormCheck () {
+  var bookingFName = document.getElementById('fName').value
+  var bookingLName = document.getElementById('lName').value
+  var bookingEmail = document.getElementById('email').value
+  var bookingPhone = document.getElementById('phoneNumber').value
+
+  var bookingCheck = {
+    fName: false,
+    lName: false,
+    email: false,
+    phone: false
+  }
+
+  function openPaymentPortal () {
+    $('#paymentPortal').show(300)
+  }
+
+  if (bookingFName !== null || bookingFName !== '') {
+    bookingCheck.fName = false
+  }
+
+  if (bookingLName !== null || bookingLName !== '') {
+    bookingCheck.lName = true
+  }
+
+  if (bookingEmail !== null || bookingEmail !== '') {
+    bookingCheck.email = true
+  }
+
+  if (bookingPhone !== null || bookingPhone !== '') {
+    bookingCheck.phone = true
+  }
+
+
+
+
+  if (bookingCheck.fName == true && bookingCheck.lName == true && bookingCheck.email == true && bookingCheck.phone == true) {
+    openPaymentPortal()
+    console.log('huzzah!')
+  } else {
+    alert('You have no filled in all the fields!')
+  }
 }
-
-mapBoxMaps()
