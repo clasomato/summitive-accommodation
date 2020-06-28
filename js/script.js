@@ -165,6 +165,7 @@ function globalFunction () {
       $('#step4').hide(200)
       $('#step3').hide(200)
       $('#step2').hide(200)
+      $('#step1').show()
     }
   }
 
@@ -553,13 +554,13 @@ function mapBoxMaps () {
   //   zoom: 12 // starting zoom
   // });
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
-  var map = new mapboxgl.Map({
-    container: 'mapHouse',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [174.775391, -41.287870], // starting position [lng, lat]
-    zoom: 12 // starting zoom
-  });
+  // mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhc29tYXRvIiwiYSI6ImNrYjczZjNzeTAxdXkycWtjZXZqMW93bjMifQ.GKDp48PUnWCG9OBFMkN-_Q';
+  // var map = new mapboxgl.Map({
+  //   container: 'mapHouse',
+  //   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+  //   center: [174.775391, -41.287870], // starting position [lng, lat]
+  //   zoom: 12 // starting zoom
+  // });
 }
 
 mapBoxMaps()

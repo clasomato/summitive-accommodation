@@ -154,9 +154,18 @@ img {
 }
 
 
-@media screen and (max-width: 600px) {
-  .step1, .step2, .step3, .step4 {
+@media screen and (max-width: 900px) {
+  .step1 {
+    justify-content: center !important;
+  }
+
+  .step2, .step3, .step4 {
     justify-content: flex-end;
+  }
+
+  .stepMobileBackground {
+    height: 100vh !important;
+    overflow: hidden;
   }
 
   .stepBackground {
