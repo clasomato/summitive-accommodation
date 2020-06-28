@@ -190,19 +190,23 @@ function globalFunction () {
 
 // Transition JS
 $('#step1Button').click(function () {
+  $('#step1').hide()
   $('#step2').show(300)
 })
 
 $('#step2Button').click(function () {
+  $('#step2').hide()
   $('#step3').show(300)
 })
 
 $('#step3Button').click(function () {
   $('#step4').show(300)
+  $('#step3').hide()
 })
 
 $('#step4Button').click(function () {
   $('#finalStep').show(300)
+  $('#step4').hide()
   globalFunction()
 })
 
@@ -503,18 +507,22 @@ houseSlideshow()
 // Back buttons
 $('#step2BackButton').click(function () {
   $('#step2').hide(300)
+  $('#step1').show()
 })
 
 $('#step3BackButton').click(function () {
   $('#step3').hide(300)
+  $('#step2').show()
 })
 
 $('#step4BackButton').click(function () {
   $('#step4').hide(300)
+  $('#step3').show()
 })
 
 $('#finalStepBackButton').click(function () {
   $('#finalStep').hide(300)
+  $('#step4').show()
 })
 
 
