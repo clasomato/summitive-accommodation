@@ -12,14 +12,10 @@ $tColour: #eb4034;
 
 body, html {
   font-family: 'Montserrat', sans-serif;
-
-
     padding: 0;
     margin: 0;
-
     box-sizing: border-box;
-
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 img {
@@ -27,10 +23,6 @@ img {
 }
 
 .stepBackground {
-  // background-image: url('../media/background.jpg');
-  // background-size: cover;
-  // background-color: red;
-
   background: linear-gradient(270deg, #75249e, #3651d2);
   background-size: 400% 400%;
 
@@ -109,6 +101,7 @@ img {
   display: inline-block !important;
   height: auto;
   padding: 5%;
+  overflow: auto;
 }
 
 
@@ -157,6 +150,7 @@ img {
   padding: 1% 2%;
   font-size: 1.5em;
   border-bottom-right-radius: 0.5em;
+  z-index: 3;
 }
 
 
@@ -168,9 +162,10 @@ img {
   .stepContaner {
     width: 95%;
     border-radius: 0.5em;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     font-size: 1em;
     padding: 1%;
+    overflow: auto;
 
     a {
       cursor: pointer;
@@ -208,6 +203,31 @@ img {
       min-width: 70%;
 
       cursor: pointer;
+    }
+  }
+
+  .finalStep {
+    display: block;
+  }
+
+  .col {
+    flex-basis: auto;
+  }
+
+
+  .accomadationPlace {
+    width: 1000px !important;
+
+    p {
+
+    }
+
+    img {
+
+    }
+
+    h3 {
+
     }
   }
 }
