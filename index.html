@@ -18,7 +18,7 @@
     <body>
         <p id="hotel"></p>
 
-        <section id="step1" class="stepBackground stepMobileBackground" style="display: none">
+        <section id="step1" class="stepBackground stepMobileBackground">
           <div class="stepContaner step1">
             <h1 id="step1Button">Lets Go</h1>
           </div>
@@ -57,29 +57,29 @@
           </div>
         </section>
 
-        <section id="finalStep" class="stepBackground stepBackgroundFinal" >
+        <section id="finalStep" class="stepBackground stepBackgroundFinal" style="display: none">
           <a class="backButton" id="finalStepBackButton">Back</a>
           <div class="stepContaner finalStep">
             <div class="row">
-              <div class="accomadationPlace col colL6 colM12 col12" id="hotelCard" >
+              <div class="accomadationPlace col colL6 colM12 col12" id="hotelCard" style="display: none">
                 <img src="media/hotelSlide1.webp" alt="">
                 <h3>InterContinental Wellington</h3>
                 <a id="hotelViewButton">View</a>
               </div>
 
-              <div class="accomadationPlace col colL6 colM12 col12" id="hostelCard" >
+              <div class="accomadationPlace col colL6 colM12 col12" id="hostelCard" style="display: none">
                 <img src="media/hostelSlide1.jpg" alt="">
                 <h3>YHA Wellington Backpacker Hostel</h3>
                 <a id="hostelViewButton">View</a>
               </div>
 
-              <div class="accomadationPlace col col12 colM12 colL6" id="motelCard" >
+              <div class="accomadationPlace col col12 colM12 colL6" id="motelCard" style="display: none">
                 <img src="media/motelSlide1.jpg" alt="">
                 <h3>Capital View Motor Inn Motel</h3>
                 <a id="motelViewButton">View</a>
               </div>
 
-              <div class="accomadationPlace col col12 colM12 colL6 " id="houseCard" >
+              <div class="accomadationPlace col col12 colM12 colL6 " id="houseCard" style="display: none">
                 <img src="media/houseSlide1.jpg" alt="">
                 <h3>Mt Victoria House With City View</h3>
                 <a id="houseViewButton">View</a>
@@ -237,6 +237,7 @@
           </div>
           <div class="modalHotel">
             <h1>Capital View Motor Inn Motel</h1>
+            <a href="https://www.capitalview.co.nz/" class="standardButton" target="_blank">Website</a>
             <div class="row">
               <div class="col colL6 col12">
                 <!-- <img src="media/background.jpg" alt="" style="border-radius: 0.5em;"> -->
@@ -305,6 +306,7 @@
           </div>
           <div class="modalHotel">
             <h1>Mt Victoria House With City View</h1>
+            <a href="https://www.airbnb.co.nz/wellington-new-zealand/stays" class="standardButton" target="_blank">Website</a>
             <div class="row">
               <div class="col colL6 col12">
                 <!-- <img src="media/background.jpg" alt="" style="border-radius: 0.5em;"> -->
@@ -406,23 +408,14 @@
               <label>CVC</label> <br>
               <input type="email" name="" value="" required id="email"> <br>
 
-              <button type="button" name="button" id="formCheckNext">Submit</button>
+              <button type="button" name="button">Submit</button>
             </form>
           </div>
         </div>
-
-
 
         <!-- JQuery -->
         <script src="js/jquery.js"></script>
         <!-- Custom JS -->
         <script src="js/script.js"></script>
-
-
-
-
-        <script>
-
-        </script>
     </body>
 </html>

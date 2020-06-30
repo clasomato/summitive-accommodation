@@ -607,3 +607,7 @@ $('#hotelBookNow').click(function () {
 $('#bookingExitButton').click(function () {
   $('#bookingPortal').hide(300)
 })
+
+$('#paymentExitButton').click(function () {
+  $('#paymentPortal').hide(300)
+})
