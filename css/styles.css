@@ -212,6 +212,13 @@ body, html {
 img {
   width: 100%; }
 
+.standardButton {
+  background-color: #eb4034;
+  padding: 1% 3%;
+  text-decoration: none;
+  color: white;
+  border-radius: 0.5em; }
+
 .stepBackground {
   background: linear-gradient(270deg, #75249e, #3651d2);
   background-size: 400% 400%;

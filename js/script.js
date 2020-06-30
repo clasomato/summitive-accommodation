@@ -225,6 +225,10 @@ $('#hotelViewButton').click(function () {
     center: [174.775391, -41.287870], // starting position [lng, lat]
     zoom: 12 // starting zoom
   })
+
+  var marker = new mapboxgl.Marker()
+  .setLngLat([174.777146, -41.284550])
+  .addTo(map)
 })
 
 $('#closeHotelModalButton').click(function () {
@@ -241,7 +245,11 @@ $('#hostelViewButton').click(function () {
     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
     center: [174.775391, -41.287870], // starting position [lng, lat]
     zoom: 12 // starting zoom
-  });
+  })
+
+  var marker = new mapboxgl.Marker()
+  .setLngLat([174.783922, -41.293146])
+  .addTo(map)
 })
 
 $('#closeHostelModalButton').click(function () {
@@ -259,7 +267,11 @@ $('#motelViewButton').click(function () {
     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
     center: [174.775391, -41.287870], // starting position [lng, lat]
     zoom: 12 // starting zoom
-  });
+  })
+
+  var marker = new mapboxgl.Marker()
+  .setLngLat([174.771652, -41.297508])
+  .addTo(map)
 })
 
 $('#closeMotelModalButton').click(function () {
@@ -277,7 +289,11 @@ $('#houseViewButton').click(function () {
     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
     center: [174.775391, -41.287870], // starting position [lng, lat]
     zoom: 12 // starting zoom
-  });
+  })
+
+  var marker = new mapboxgl.Marker()
+  .setLngLat([174.785740, -41.293788])
+  .addTo(map)
 })
 
 $('#closeHouseModalButton').click(function () {
@@ -554,29 +570,40 @@ function bookingFormCheck () {
     $('#paymentPortal').show(300)
   }
 
-  if (bookingFName !== null || bookingFName !== '') {
-    bookingCheck.fName = false
+  if (bookingFName !== '') {
+    bookingCheck.fName = true
   }
 
-  if (bookingLName !== null || bookingLName !== '') {
+  if (bookingLName !== '') {
     bookingCheck.lName = true
   }
 
-  if (bookingEmail !== null || bookingEmail !== '') {
+  if (bookingEmail !== '') {
     bookingCheck.email = true
   }
 
-  if (bookingPhone !== null || bookingPhone !== '') {
+  if (bookingPhone !== '') {
     bookingCheck.phone = true
   }
 
+  console.log(bookingCheck)
 
 
 
-  if (bookingCheck.fName == true && bookingCheck.lName == true && bookingCheck.email == true && bookingCheck.phone == true) {
+
+  if (bookingCheck.fName === true && bookingCheck.lName === true && bookingCheck.email === true && bookingCheck.phone === true) {
     openPaymentPortal()
     console.log('huzzah!')
   } else {
     alert('You have no filled in all the fields!')
   }
 }
+
+// Booking bookingPortal
+$('#hotelBookNow').click(function () {
+  $('#bookingPortal').show(300)
+})
+
+$('#bookingExitButton').click(function () {
+  $('#bookingPortal').hide(300)
+})
