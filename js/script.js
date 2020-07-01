@@ -177,9 +177,6 @@ function globalFunction () {
   var availablePlaces = calaulateAmmontOfPeople(data)
   var availablePriceRange = calculateMaxPrice(data)
   var availableNights = calaulateNights(data)
-  // console.log(availablePlaces)
-  // console.log(availablePriceRange)
-  // console.log(availableNights)
 
   // Calling the total function
   calculateTotals(availablePlaces, availablePriceRange, availableNights)
@@ -611,3 +608,73 @@ $('#bookingExitButton').click(function () {
 $('#paymentExitButton').click(function () {
   $('#paymentPortal').hide(300)
 })
+
+function meals () {
+  function hotelMeals () {
+    var hotelBreakfast = {
+      eggs: 21,
+      broc: 39,
+      BreakfastBuffe: 50
+    }
+
+    var hotelDinner = {
+      Steak: 80,
+      DinnerBuffe: 90
+    }
+
+    // Loop through the object to print out data
+    const keys = Object.keys(hotelDinner)
+    var dinerDom = document.getElementById('hotelDinnerMenuContainer')
+    for (const key of keys) {
+      console.log(key)
+      dinerDom.innerHTML = '<li>' + key + '</li>'
+    }
+  } // Hotel meals ENDS
+
+  function hostelMeals () {
+    var hostelBreakfast = {
+      eggs: 21,
+      broc: 39,
+      BreakfastBuffe: 50
+    }
+
+    var hostelDinner = {
+      Steak: 80,
+      DinnerBuffe: 90
+    }
+  } // Hostel Meals ENDS
+
+  function motelMeals () {
+    var motelBreakfast = {
+      eggs: 21,
+      broc: 39,
+      BreakfastBuffe: 50
+    }
+
+    var motelDinner = {
+      Steak: 80,
+      DinnerBuffe: 90
+    }
+  } // Motel Meals ENDS
+
+  function houseMeals () {
+    var houseBreakfast = {
+      eggs: 21,
+      broc: 39,
+      BreakfastBuffe: 50
+    }
+
+    var houseDinner = {
+      Steak: 80,
+      DinnerBuffe: 90
+    }
+  } // House Meals ENDS
+
+  // Calling the diffrent esstablishment functions
+  hotelMeals()
+  hostelMeals()
+  motelMeals()
+  houseMeals()
+}
+
+meals()
