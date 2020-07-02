@@ -115,22 +115,18 @@
       }
 
       if (availablePlaces.hotel1 === true && availablePriceRange.hotel1 === true && availableNights.hotel1 === true) {
-        console.log('Hotel Available')
         totalavailability.hotel1 = true
       }
 
       if (availablePlaces.hostel1 === true && availablePriceRange.hostel1 === true && availableNights.hostel1 === true) {
-        console.log('Hostel Available')
         totalavailability.hostel1 = true
       }
 
       if (availablePlaces.motel1 === true && availablePriceRange.motel1 === true && availableNights.motel1 === true) {
-        console.log('Motel Available')
         totalavailability.motel1 = true
       }
 
       if (availablePlaces.house === true && availablePriceRange.house === true && availableNights.house === true) {
-        console.log('House Available')
         totalavailability.house = true
       }
 
@@ -306,18 +302,13 @@
 
     slideNextButton.addEventListener('click', event => {
       slideIndex = slideIndex + 1
-      console.log(slideIndex)
       slideCheck()
     })
 
     slideBackButton.addEventListener('click', event => {
       slideIndex = slideIndex - 1
-      console.log(slideIndex)
       slideCheck()
     })
-
-    console.log('zzz')
-    console.log(slideIndex)
 
     function slideCheck () {
 
@@ -360,18 +351,13 @@
 
     slideNextButton.addEventListener('click', event => {
       slideIndex = slideIndex + 1
-      console.log(slideIndex)
       slideCheck()
     })
 
     slideBackButton.addEventListener('click', event => {
       slideIndex = slideIndex - 1
-      console.log(slideIndex)
       slideCheck()
     })
-
-    console.log('zzz')
-    console.log(slideIndex)
 
     function slideCheck () {
 
@@ -414,18 +400,13 @@
 
     slideNextButton.addEventListener('click', event => {
       slideIndex = slideIndex + 1
-      console.log(slideIndex)
       slideCheck()
     })
 
     slideBackButton.addEventListener('click', event => {
       slideIndex = slideIndex - 1
-      console.log(slideIndex)
       slideCheck()
     })
-
-    console.log('zzz')
-    console.log(slideIndex)
 
     function slideCheck () {
       if (slideIndex === 1) {
@@ -467,18 +448,13 @@
 
     slideNextButton.addEventListener('click', event => {
       slideIndex = slideIndex + 1
-      console.log(slideIndex)
       slideCheck()
     })
 
     slideBackButton.addEventListener('click', event => {
       slideIndex = slideIndex - 1
-      console.log(slideIndex)
       slideCheck()
     })
-
-    console.log('zzz')
-    console.log(slideIndex)
 
     function slideCheck () {
       if (slideIndex === 1) {
@@ -577,7 +553,6 @@
 
     if (bookingCheck.fName === true && bookingCheck.lName === true && bookingCheck.email === true && bookingCheck.phone === true) {
       openPaymentPortal()
-      console.log('huzzah!')
     } else {
       toastr.error('You need to fill in all available fields.', 'Error!')
     }
