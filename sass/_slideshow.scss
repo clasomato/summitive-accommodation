@@ -4,7 +4,10 @@
   border-top-left-radius: 0em !important;
 
   img {
+    border-top-right-radius: 0.5em;
     border-top-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 0em;
   }
 }
 
@@ -12,6 +15,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  text-align: center;
+  cursor: pointer;
 
   p {
     background-color: white;
@@ -22,5 +27,11 @@
     padding: 1% 3%;
     font-size: 1.2em;
     min-width: 20%;
+    cursor: pointer;
   }
+}
+
+.modalWebButton {
+  border-bottom-left-radius: 0em !important;
+  border-bottom-right-radius: 0em !important;
 }

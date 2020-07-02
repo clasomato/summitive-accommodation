@@ -621,8 +621,8 @@
 
     // Hostel Meals
     function hostelMeals () {
-      var hostelBreakfast = ['Chicken Waffles', 'Breakfast Buffet']
-      var hostelDinner = ['Steak', 'Dinner Buffet']
+      var hostelBreakfast = ['English Breakfast', 'Breakfast Buffet']
+      var hostelDinner = ['Quesadilla', 'Dinner Buffet']
       var str = '<ul>'
       var str2 = '<ul>'
 
@@ -642,8 +642,8 @@
     } // Hostel Meals ENDS
 
     function motelMeals () {
-      var motelBreakfast = ['Chicken Waffles', 'Breakfast Buffet']
-      var motelDinner = ['Steak', 'Dinner Buffet']
+      var motelBreakfast = ['Pancakes with a selection of berrys & full fat cream', 'Breakfast Buffet']
+      var motelDinner = ['Inhouse Beveled Eggs w" Beer', 'Dinner Buffet']
       var str = '<ul>'
       var str2 = '<ul>'
 
@@ -664,8 +664,8 @@
 
     // House Meals
     function houseMeals () {
-      var houseBreakfast = ['Chicken Waffles', 'Breakfast Buffet']
-      var houseDinner = ['Steak', 'Dinner Buffet']
+      var houseBreakfast = ['No Breakfast Provided']
+      var houseDinner = ['No Dinner Provided']
       var str = '<ul>'
       var str2 = '<ul>'
 
