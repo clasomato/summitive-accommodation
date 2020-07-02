@@ -611,24 +611,16 @@ $('#paymentExitButton').click(function () {
 
 function meals () {
   function hotelMeals () {
-    var hotelBreakfast = {
-      eggs: 21,
-      broc: 39,
-      BreakfastBuffe: 50
-    }
+    var hotelDinner = ['steak', 'Dinner Buffet']
+    var str = '<ul>'
 
-    var hotelDinner = {
-      Steak: 80,
-      DinnerBuffe: 90
-    }
+    hotelDinner.forEach(function (hotelDinner) {
+      str += '<li>' + hotelDinner + '</li>'
+    })
 
-    // Loop through the object to print out data
-    const keys = Object.keys(hotelDinner)
-    var dinerDom = document.getElementById('hotelDinnerMenuContainer')
-    for (const key of keys) {
-      console.log(key)
-      dinerDom.innerHTML = '<li>' + key + '</li>'
-    }
+    str += '</ul>'
+    document.getElementById('hotelDinnerMenuContainer').innerHTML = str
+
   } // Hotel meals ENDS
 
   function hostelMeals () {
