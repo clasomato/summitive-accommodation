@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
@@ -16,9 +17,22 @@
 
   </head>
     <body>
-        <p id="hotel"></p>
+        <!-- <p id="hotel"></p> -->
+        <section id="landingPage">
+          <div class="landingPageContainer">
+            <div class="topHalfSplashContainer">
+              <h1>Welcome to Accomadation Wellington</h1>
+              <h3>A Lightweight JS Search Engine to Find the Perfect Place to Stay.</h3>
+            </div>
 
-        <section id="step1" class="stepBackground stepMobileBackground">
+            <div class="landingPageContent">
+              <h2>Check Availablity Here</h2>
+              <a class="standardButton" id="letsGoButton">Lets Go</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="step1" class="stepBackground stepMobileBackground" style="display: none">
           <div class="stepContaner step1">
             <h1 id="step1Button">Lets Go</h1>
           </div>
@@ -29,7 +43,7 @@
           <div class="stepContaner step2">
             <form>
               <label>How many people will be staying?</label>
-              <input type="number" placeholder="How many people are there?" id="peopleInput" required> <br>
+              <input type="number" placeholder="Example: 1" id="peopleInput" required> <br>
               <a id="step2Button">Next</a>
             </form>
           </div>
@@ -40,7 +54,7 @@
           <div class="stepContaner step3">
             <form>
               <label>How many nights are you looking to stay?</label>
-              <input type="number" placeholder="How many nights do you want to stay?" id="nightsToStay" required> <br>
+              <input type="number" placeholder="Example: 2" id="nightsToStay" required> <br>
               <a id="step3Button">Next</a>
             </form>
           </div>
@@ -51,7 +65,7 @@
           <div class="stepContaner step4">
             <form>
               <label>What is your maximum price range? (number only no "$")</label>
-              <input type="number" placeholder="What is your price range?" id="userMaxPriceInput" required> <br>
+              <input type="number" placeholder="Example: 600" id="userMaxPriceInput" required> <br>
               <a id="step4Button">Next</a>
             </form>
           </div>
@@ -60,14 +74,14 @@
         <section id="finalStep" class="stepBackground stepBackgroundFinal" style="display: none">
           <a class="backButton" id="finalStepBackButton">Back</a>
           <div class="stepContaner finalStep">
-            <div class="row">
-              <div class="accomadationPlace col colL6 colM12 col12" id="hotelCard" style="display: none">
+            <div class="">
+              <div class="accomadationPlace" id="hotelCard" style="display: none">
                 <img src="media/hotelSlide1.webp" alt="">
                 <h3>InterContinental Wellington</h3>
                 <a id="hotelViewButton">View</a>
               </div>
 
-              <div class="accomadationPlace col colL6 colM12 col12" id="hostelCard" style="display: none">
+              <div class="accomadationPlace" id="hostelCard" style="display: none">
                 <img src="media/hostelSlide1.jpg" alt="">
                 <h3>YHA Wellington Backpacker Hostel</h3>
                 <a id="hostelViewButton">View</a>
@@ -114,7 +128,7 @@
               </div>
 
               <div class="col colL6 col12">
-                <div id='map' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+                <div id='map' style='width: 100%; height: 100%; border-radius: 0.5em;'></div>
               </div>
             </div>
 
@@ -127,14 +141,11 @@
               <div class="col colL6 col12">
                 <h2>Menu</h2>
                 <h3>Breakfast</h3>
-                <ul id="hotelBreakfastMenuContainer">
+                <div id="hotelBreakfastMenuContainer"></div>
 
-                </ul>
-                <br>
                 <h3>Dinner</h3>
-                <ul id="hotelDinnerMenuContainer">
+                <div id="hotelDinnerMenuContainer"></div>
 
-                </ul>
                 <a class="modalContactButtons">Contact</a>
               </div>
             </div>
@@ -171,7 +182,7 @@
               </div>
 
               <div class="col colL6 col12">
-                <div id='mapHostel' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+                <div id='mapHostel' style='width: 100%; height: 100%; border-radius: 0.5em;'></div>
               </div>
             </div>
 
@@ -184,27 +195,10 @@
               <div class="col colL6 col12">
                 <h2>Menu</h2>
                 <h3>Breakfast</h3>
-                <ul>
-                  <li>Avacado Toast with Mushrooms: $10.60 (Vegan, Vegatarian, Gluten free + $1)</li>
-                  <li>Waffles: $13.20</li>
-                  <li>Poached Egg: $4.50</li>
-                </ul>
-
-                <h3>Lunch</h3>
-                <ul>
-                  <li>Bacon & Eggs: $10.60</li>
-                </ul>
+                <div id="hostelBreakfastMenuContainer"></div>
 
                 <h3>Dinner</h3>
-                <ul>
-                  <li>T-Bone Steak: $53.99</li>
-                </ul>
-
-                <h3>Deserts & Sides/Snacks</h3>
-                <ul>
-                  <li>Ice Cream Cone: $3.50</li>
-                  <li>Fries: $4.50</li>
-                </ul>
+                <div id="hostelDinnerMenuContainer"></div>
 
                 <a class="modalContactButtons">Contact</a>
               </div>
@@ -241,7 +235,7 @@
               </div>
 
               <div class="col colL6 col12">
-                <div id='mapMotel' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+                <div id='mapMotel' style='width: 100%; height: 100%; border-radius: 0.5em;'></div>
               </div>
             </div>
 
@@ -254,27 +248,10 @@
               <div class="col colL6 col12">
                 <h2>Menu</h2>
                 <h3>Breakfast</h3>
-                <ul>
-                  <li>Avacado Toast with Mushrooms: $10.60 (Vegan, Vegatarian, Gluten free + $1)</li>
-                  <li>Waffles: $13.20</li>
-                  <li>Poached Egg: $4.50</li>
-                </ul>
-
-                <h3>Lunch</h3>
-                <ul>
-                  <li>Bacon & Eggs: $10.60</li>
-                </ul>
+                <div id="motelBreakfastMenuContainer"></div>
 
                 <h3>Dinner</h3>
-                <ul>
-                  <li>T-Bone Steak: $53.99</li>
-                </ul>
-
-                <h3>Deserts & Sides/Snacks</h3>
-                <ul>
-                  <li>Ice Cream Cone: $3.50</li>
-                  <li>Fries: $4.50</li>
-                </ul>
+                <div id="motelDinnerMenuContainer"></div>
 
                 <a class="modalContactButtons">Contact</a>
               </div>
@@ -310,7 +287,7 @@
               </div>
 
               <div class="col colL6 col12">
-                <div id='mapHouse' style='width: 100%; height: 400px; border-radius: 0.5em;'></div>
+                <div id='mapHouse' style='width: 100%; height: 100%; border-radius: 0.5em;'></div>
               </div>
             </div>
 
@@ -323,27 +300,10 @@
               <div class="col colL6 col12">
                 <h2>Menu</h2>
                 <h3>Breakfast</h3>
-                <ul>
-                  <li>Avacado Toast with Mushrooms: $10.60 (Vegan, Vegatarian, Gluten free + $1)</li>
-                  <li>Waffles: $13.20</li>
-                  <li>Poached Egg: $4.50</li>
-                </ul>
-
-                <h3>Lunch</h3>
-                <ul>
-                  <li>Bacon & Eggs: $10.60</li>
-                </ul>
+                <div id="houseBreakfastMenuContainer"></div>
 
                 <h3>Dinner</h3>
-                <ul>
-                  <li>T-Bone Steak: $53.99</li>
-                </ul>
-
-                <h3>Deserts & Sides/Snacks</h3>
-                <ul>
-                  <li>Ice Cream Cone: $3.50</li>
-                  <li>Fries: $4.50</li>
-                </ul>
+                <div id="houseDinnerMenuContainer"></div>
 
                 <a class="modalContactButtons">Contact</a>
               </div>
@@ -401,7 +361,13 @@
 
         <!-- JQuery -->
         <script src="js/jquery.js"></script>
-        <!-- Custom JS -->
+        <!-- Toastr -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="js/script.js"></script>
+
+        <!-- Custom JS -->
+        <script>
+          toastr.options.closeButton = true;
+        </script>
     </body>
 </html>
